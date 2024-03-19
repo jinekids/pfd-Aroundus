@@ -1,0 +1,352 @@
+**** 주석 처리 : 컨트롤 + / ****
+
+마크업 : 컨텐츠 의미, 역활 표시
+
+h1태그 : 제일 중요한 제목 (대제목)
+
+li태그(list) : 목록, 항목을 의미 
+
+ul태그(unordered list) : li태그들을 묶음
+
+p : 문단, 설명 paragraph
+들여쓰기 
+
+html문서는 마크업된 컨텐프를 담고 있는 문서
+
+젠코딩 (마크업속도를 10배 증가시키는 코딩 방법)
+ex :
+(h1>a)+ul>li*4>a
+=>  h1 태그 안에 a태그 하나 넣고
+    ul 태그 안에 li태그 4개를 넣고 각자 a태그를 넣음
+
+css : cascading style sheet (스타일 문서)
+
+css 구문형식
+마크업태그
+{
+    속성:값;
+}
+
+a태그 : 문서연결 anchor
+
+margin : 밖 여백
+padding : 안 여백
+line-height : 줄간격
+font-weight : 글자 두께
+line-height: 2; -> 기본글자크기(16px)의 두배를 의미
+
+
+margin은 바깥 쪽 여백
+  >  다른 요소와 여백 지정
+
+padding은 안 쪽 여백
+  >  
+
+box-sizing: border-box;
+  >  padding으로 주면 박스(기존 너비) 값이 커짐
+  >  기존 너비 값 유지는 box-sizing으로 해야함
+
+
+
+div : 분할/ 분할된 영역
+
+태그는 사각박스형태이다
+블럭태그는 수평으로 꽉찬다
+블럭태그는 쌓인다(수직)
+블럭태그는 너비와 높이를 지정할 수 있다.
+블럭태그는 컨텐츠의 높이만큼 커진다
+<div>
+
+* 배경 이미지 지정하기
+  background-image: url(이미지주소/이미지이름,확장자);
+  background-size: cover;
+  background-position: left center;
+
+* 태그에 이름 지정
+같은 태그가 반복되기에 이름 지정하여 각 각 이름 별로 별도의 스타일을 지정하기 위함
+1. id 지정 : <태그명 id="영문">
+  >  css 표기 : 태그#영문
+  >  태그에 지정하는 고유 이름
+
+2. class 지정 : <태그명 class="영문">
+  >  css 표기 : 태그.class명
+  >  태그에 지정하는 공용 이름
+
+class는 여러개 지정 가능
+  >  class="paddingT50 paddingB50"
+
+div.wrap>h2.h2+p.p+ul.list>li*8
+  >  젠코딩으로 class를 바로 지정 가능
+
+
+
+
+main 태그 : 페이지의 주요내용을 담는 영역
+footer태그 : 하단 영역
+section 영역 : 절 장
+
+(heder>div.wrap>(h1>a)+(ul>li*4>a)+a)+(div#title>div.wrap>h2+p)+(main>section*4)+footer
+
+
+공통 css 파일 생성하기
+common.css
+
+
+css cascading style sheet
+  >  계단식의
+  
+
+
+메뉴바에서는 gap으로 간격 조절 안 함
+
+padding: 0 20px 0 20px; >> T R B L 순으로 공간 지정
+
+:hover >> 사용 시 마우스 오버 시 실행되는 태그
+
+hgroup : h 태그를 묶어주는 것
+
+box-shadow: 0 0 10px #ccc; >> x y 블러 색상 순
+
+
+로고 넣는 방법
+1. 배경이미지로 까는 법
+  font-size: 0; > 폰트 사이즈 줄이고
+  width: 45px;
+  height: 35px; > 크기 지정
+  display: block; > text는 inline이므로 block으로 지정
+  background-image: url(../img/logo.svg); > 이미지 지정
+  background-repeat: no-repeat; > 반복 금지
+  background-position: center; > 위치 선정
+
+2. svg 코드 전체를 넣는 법
+> 해당 이미지의 svg 소스를 html 태그 안에 넣기
+
+
+* display:flex를 지정하면 자식 요소들은 block 요소로 바뀜
+
+
+* svg 파일 스타일링
+<style>
+.icon-1{
+   fill:none; >> 면 조절
+   stroke:#f5f5f5; >> 선 색상지정
+   stroke-miterlimit:10; >> 선두께
+}
+</style>
+
+
+span > inline 태그를 묶어주는 요소
+botton > inline 태그
+max-width > 최대 넓이 지정
+
+
+* 스타일 우선순위
+인라인 스타일 >  id 스타일 > 클래스 스타일 > 태그 스타일 순
+1.  class 보다 id 가 우선 적용
+ex) id는 본명 , class는 예명
+#title {
+  margin: 0 auto;
+}
+.marginB50{
+    margin-bottom: 50px !important;
+}
+>> 일 때 !important있는 것이 우선 적용
+
+2. css 파일 중 최신 css 파일이 우선적용
+
+
+
+/css 스타일 적용
+1. 태그내스타일 태그안에 style="속성:값;" (1순위)
+<footer style="background-color: tomato;">
+
+2. 내부스타일 head태구안에 style태그로 지정 (2순위)
+    <style type="text/css">
+        footer{
+            background-color: darkcyan;
+        }
+    </style>
+
+3. 외부스타일link로 외부스타일 파일 연결 (3순위)
+<link rel="stylesheet" href="css/product.css">
+ex) body footer{ background-color: blue; }
+    footer{ background-color: red; }
+    일 경우 구체적인 구조 먼저 우선 순위 / 같은 이름으로 주어지면 마지막에 있는 것이 적용
+
+
+/width: calc(100% / 2);
+>> calc() : 사칙연산 가능 / 연간 부호는 무조건 띄어쓰기 해서 사용
+>> 전체 값에서 반을 나누어 크기 조정
+
+/:not(:요소) ~가 아닌
+article:not(:first-child) >> 첫번쨰 자직이 아닌 article
+
+
+/grid 설명
+1. grid-column: 2;
+>> 그리드에서 2열(column)으로 나눔
+
+2. grid-row: 1 / span 3;
+>> 행(row)을 1번을 지정하고 3 행을 합친다는 것
+
+
+/ strong 태그 : 강조하는 태그
+
+
+/ transition : all 1s
+변이 (변화)
+속상값의 차이에 따른 애니메이션
+처음상태의 서냍ㄱ자에게 지정한다
+
+/ transform: scale(0.6); >크기 줄이기
+ transform 특징
+1. 위치조정이나 크기등을 바꿔도 다른 요소에 영향을 주지 않는다
+ex) font-size 나 margin 같은 것으로 비교 해보면 쉬움
+
+
+/ overflow: hidden;
+영역 밖으로 나오는 것은 감추기
+
+/ flexible image : 유연한 이미지
+이미지의 부모크기를 줄여도 이미지크기는 줄어들지 않는다
+이때, 부모 크기 변경 시 이미지 크기도 같이 변경되게 하려면 width : 100% 로 지정
+
+
+/ position을 설정한 요소가 제일 위에 위치함
+자식 요소에 position: absolute(공간 위에 떠있는 것)를 주고 상하좌우 위치 조정(부모요소기준)
+position: relative; 를 부모 요소에 지정
+
+/ z-index 값을 넣어주면 더 위로 올라옴
+
+
+margin : 0 auto
+>> 블럭 자체를 중앙으로 배치하는 것
+>> 앞에 0이 top/bottom 뒤에 auto가 left/right
+
+text-align : center
+>> 상자 안에 있는 글자/대상 을 중아으로 배치하는 것
+text-align 은 inline 요소
+
+
+margin 과 text-align을 같이 써야할 경우
+1. 베경색을 주고 width 를 주면 배경 색이 줄어듬
+2. margin 0 auto를 사용하면
+>> 상자와 글씨가 같이 중앙으로 배치 됨
+
+
+메뉴바에서는 gap으로 간격 조절 안 함
+padding: 0 20px 0 20px; >> T R B L 순으로 공간 지정
+:hover >> 사용 시 마우스 오버 시 실행되는 태그
+hgroup : h 태그를 묶어주는 것
+box-shadow: 0 0 10px #ccc; >> x y 블러 색상 순
+
+크기 width / height 100% 의미 >> 상위요소에 꽉참
+
+window 브라우저창
+html 100% > 브라우저 꽉차게
+body 100% > 그 안에 body부분 꽉차게
+div#title 100% > 그 안에 div 부분 꽉차게
+
+
+로고 넣는 방법
+1. 배경이미지로 까는 법
+  font-size: 0; > 폰트 사이즈 줄이고
+  width: 45px;
+  height: 35px; > 크기 지정
+  display: block; > text는 inline이므로 block으로 지정
+  background-image: url(../img/logo.svg); > 이미지 지정
+  background-repeat: no-repeat; > 반복 금지
+  background-position: center; > 위치 선정
+
+2. svg 코드 전체를 넣는 법
+> 해당 이미지의 svg 소스를 html 태그 안에 넣기
+
+span > inline 태그를 묶어주는 요소
+botton > inline 태그
+max-width > 최대 넓이 지정
+
+스타일 우선순위
+인라인 스타일 >  id 스타일 > 클래스 스타일 > 태그 스타일 순
+1.  class 보다 id 가 우선 적용
+ex) id는 본명 , class는 예명
+#title {
+  margin: 0 auto;
+}
+.marginB50{
+    margin-bottom: 50px !important;
+}
+>> 일 때 !important있는 것이 우선 적용
+
+2. css 파일 중 최신 css 파일이 우선적용
+
+
+
+
+외부스타일link로 외부스타일 파일 연결
+내부스타일 head태구안에 style태그로 지정
+태그내스타일 태그안에 style="속성:값;"
+
+
+
+transition : all 1s
+변이 (변화)
+속상값의 차이에 따른 애니메이션
+처음상태의 선택자에게 지정한다
+
+transform: scale(0.6); >크기 줄이기
+ transform 특징
+1. 위치조정이나 크기등을 바꿔도 다른 요소에 영향을 주지 않는다
+ex) font-size 나 margin 같은 것으로 비교 해보면 쉬움
+
+
+overflow: hidden;
+영역 밖으로 나오는 것은 감추기
+
+flexible image : 유연한 이미지
+이미지의 부모크기를 줄여도 이미지크기는 줄어들지 않는다
+이때, 부모 크기 변경 시 이미지 크기도 같이 변경되게 하려면 width : 100% 로 지정
+
+
+position을 설정한 요소가 제일 위에 위치함
+자식 요소에 position: absolute(공간 위에 떠있는 것)를 주고 상하좌우 위치 조정(부모요소기준)
+position: relative; 를 부모 요소에 지정
+
+z-index 값을 넣어주면 더 위로 올라옴
+
+
+메뉴 간겨조절시 a태그에 padding이나 line-height 로 조절하고 display:block 처리
+
+
+background-origin: content-box;
+> 내용물을 어디에 넣을 것인가?
+padding을 제외한 content 영역 box에 넣을 것
+
+background-origin: padding-box
+>> padding 영역까지 넣음
+
+background-origin: border-box
+>> border영역까지 넣음
+
+
+position: fixed;
+>> 화면 내에서 위치 고정
+bottom: 50px;  right: 100px; 처럼 위치 지정
+
+* i태그 : 강조의 의미
+
+
+header div.wrap ul.lang li:nth-child(3) a:hover::after{
+  display: initial;
+  animation-name: fade; /* 애니메이션 이름 */
+  animation-duration: 1s; /* 애니메이션 시간(초) */
+}
+@keyframes fade{ /* fade이름의 애니메이션 설정 */
+  0%{ /* 처음 */
+    opacity: 0; /* 투명도 */
+    transform: translateY(30%);
+  }
+  100%{ /* 마지막 */
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

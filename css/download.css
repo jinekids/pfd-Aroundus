@@ -1,0 +1,23 @@
+section#download{
+  background-color: #f2f2f2;
+}
+section#download .wrap{
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  grid-template-rows: auto auto;
+}
+section#download .wrap h2{
+  font-weight: 200;
+  font-size: 50px;
+}
+section#download .wrap a{
+   
+  color: #009bfa;
+}
+section#download .wrap img{
+
+  grid-column: 2;
+  width: 180px;
+  height: 180px;
+  grid-row: 1 / span 3;
+ }

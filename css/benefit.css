@@ -1,0 +1,20 @@
+section#benefit{
+
+}
+section#benefit .wrap{
+  transform: translateX(-100%);
+}
+section#benefit .wrap h2{
+  font-weight: 200;
+  font-size: 50px;
+}
+section#benefit .wrap h2 span{
+
+}
+section#benefit .wrap p{
+}
+section#benefit .wrap p span{
+
+}
+section#benefit .wrap a{
+}
