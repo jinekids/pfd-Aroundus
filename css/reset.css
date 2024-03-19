@@ -38,6 +38,7 @@ border:none;
  
 a{
  text-decoration:0;color:#000;
+ cursor: url('../img/icon_cursor.svg') 14 12, auto;
  }
  
 table{

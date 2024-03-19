@@ -1,7 +1,9 @@
 body{
-    font-family: 'NanumSquareRound','-apple-system','BlinkMacSystemFont','SFProDisplay', 'AppleSDGothicNeo', 'HelveticaNeue', 'Helvetica', arial, 'sans-serif';
-    font-weight: 400;
-    word-break: keep-all;
+    font-family:'Raleway','Noto Sans KR',sans-serif; 
+    font-size:14px; 
+    line-height:1.2; 
+    color:#2d2d2d;
+    vertical-align:baseline; 
+    word-break:keep-all; 
     word-wrap: break-word;
-    overflow-wrap: break-word;
 }

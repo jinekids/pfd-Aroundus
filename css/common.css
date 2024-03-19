@@ -72,21 +72,7 @@ body{
 .yellow{
     color: #ffcd03;
 }
-.blue{
-    color: #00bdfb;
-}
-.orange{
-    color: #ff6f04;
-}
-.purple{
-    color: #896fe4;
-}
-.green{
-    color: #a6d935;
-}
-.red{
-    color: #ff5c5c;
-}
+
 
 
 /* block , 인라인 */
@@ -146,4 +132,8 @@ body{
 
 .h100{
   height: 100%;
+}
+
+button{
+    cursor: url('../img/icon_cursor.svg') 14 12, auto;
 }
