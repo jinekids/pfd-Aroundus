@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
 
     <!-- 나눔스퀘어라운드폰트 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
@@ -28,22 +30,74 @@
 
     <!--------------- 제이쿼리 --------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-
+    <!-- main 스크립트 -->
     <script type="text/javascript">
         $(document).ready(function(){
-            $("header .wrap > ul.gnb, header .wrap > ul.gnb li").hover(
+            $("header .wrap ul.gnb > li").hover(
                 function(){
                     $(this).addClass("on");
                     $("header .wrap").addClass("bg_bk");
-                    $("header .wrap .wgnb").addClass("wShow");
+                    $("header .wrap .wsub").addClass("wShow");
+
                 },
                 function(){
                     $(this).removeClass("on");
                     $("header .wrap").removeClass("bg_bk");
-                    $("header .wrap .wgnb").removeClass("wShow");
+                    $("header .wrap .wsub").removeClass("wShow");
                 }
             )
             
+
+            // $('.header_box .menu_box > ul > li').hover(
+            //     function(){
+            //         var t = $(this);
+            //         $('.header_box2').find('.hd_bg').stop().slideDown(200 , function(){t.addClass('on').find('.submenu').stop().fadeIn(300);});
+            //     },
+            //     function(){
+            //         $('.header_box2').find('.hd_bg').stop().slideUp(200);
+            //         $(this).removeClass('on').find('.submenu').stop().fadeOut(200);
+            //     }
+            // );
+
+
+
+
+                // // 대메뉴오버시 서브를 슬라이드 다운
+                // var wsubN;
+                // $("header .wrap ul.gnb li a").mouseenter(
+                //     function(){
+                //         wsubN=$(this).parent().index()+1;//마우스올린 대상의 부모의 순번을 가져와서 +1더해서 넣어라
+                //         if( $("header .wrap .wgnb .wsub:nth-child("+wsubN+")").has("ul").length>0){
+                //             $("header .wrap .wgnb .wsub:nth-child("+wsubN+")").parent().stop().slideDown();
+                //             //console.log(wsubN);
+                //         }else{
+                //             $("header .wrap .wgnb").stop().hide();
+                //         }
+                       
+                //         //제이쿼리 slideDown()시 css속성에 transition이 있으면 제대로  펼쳐지지 않는다... 
+                //         //wsub를 보이게 하시오
+                       
+                       
+                //         $("header .wrap .wgnb .wsub:nth-child("+wsubN+")").fadeIn();
+                //         $("header .wrap .wgnb .wsub:not(:nth-child("+wsubN+"))").fadeOut();
+                //     }
+                // );   
+                
+                // // 서브wgnb영역을 벗어나면 실행하시오(wgnb가 슬라이드업)
+                // $("header .wrap .wgnb,header").mouseleave(function(){
+                //     $(".wgnb").slideUp();
+                // });
+
+                // // h1요소에 마우스진입하면 (wgnb가 슬라이드업)
+                // $("header .wrap h1").mouseenter(function(){
+                //     $("header .wrap .wgnb").slideUp();
+                // });
+
+
+
+
+
+
         });
     </script>
 
@@ -100,39 +154,39 @@
                 <a href="">어라운드어스</a>
             </h1>
             <ul class="gnb flex">
-                <li><a class="" href="">About Around US</a></li>
-                <li><a class="" href="">HIGHLIGHT</a></li>
-                <li><a class="" href="">Announce</a></li>
+                <li>
+                    <a class="" href="">About Around US</a>
+                    <div class="wsub">
+                        <ul class="">
+                            <li><a href="">Company Introduction</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="" href="">HIGHLIGHT</a>
+                    <div class="wsub ">
+                        <ul class="">
+                            <li><a href="">Artist Home</a></li>
+                            <li><a href="">Career</a></li>
+                            <li><a href="">Schedule</a></li>
+                            <li><a href="">Artist Notice</a></li>
+                            <li><a href="">Staff Notice</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a class="" href="">Announce</a>
+                    <div class="wsub ">
+                        <ul class="">
+                            <li><a href="">Notice</a></li>
+                            <li><a href="">News</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-
-            <div class="wgnb">
-                <div class="wsub">
-                    <h2 class="hide">About Around US</h2>
-                    <ul class="">
-                        <li><a href="">Company Introduction</a></li>
-                        <li><a href="">History</a></li>
-                        <li><a href="">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="wsub">
-                    <h2 class="hide">HIGHLIGHT</h2>
-                    <ul class="">
-                        <li><a href="">Artist Home</a></li>
-                        <li><a href="">Career</a></li>
-                        <li><a href="">Schedule</a></li>
-                        <li><a href="">Artist Notice</a></li>
-                        <li><a href="">Staff Notice</a></li>
-                    </ul>
-                </div>
-                <div class="wsub">
-                    <h2 class="hide">Announce</h2>
-                    <ul class="">
-                        <li><a href="">Notice</a></li>
-                        <li><a href="">News</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="search">
                 <a class="search_btn" href="#"><span>Search</span></a>
             </div>
@@ -304,6 +358,7 @@
                         <ul class="video-item">
                             <li>
                                 <a href="https://www.youtube.com/embed/olPe8g7A32E" target="_blank">
+                                    <div class="img" style="background-image:url('./img/video1.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">[MV] 하이라이트(HIGHLIGHT) - BODY</p>
                                         <p class="text2">하이라이트(HIGHLIGHT)</p>
@@ -312,6 +367,7 @@
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/embed/zmmP8vlh04o" target="_blank">
+                                    <div class="img" style="background-image:url('./img/video2.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">[Teaser2] 하이라이트(HIGHLIGHT) - BODY</p>
                                         <p class="text2">하이라이트(HIGHLIGHT)</p>
@@ -320,6 +376,7 @@
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/embed/w-kL0i5GQww" target="_blank">
+                                    <div class="img" style="background-image:url('./img/video3.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">[Teaser1] 하이라이트(HIGHLIGHT) - BODY</p>
                                         <p class="text2">하이라이트(HIGHLIGHT)</p>
@@ -328,6 +385,7 @@
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/embed/M9sAcD6v_VY" target="_blank">
+                                    <div class="img" style="background-image:url('./img/video4.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">HIGHLIGHT THE 5TH MINI ALBUM [Switch On] HIGHLIGHT MEDLEY</p>
                                         <p class="text2">하이라이트(HIGHLIGHT)</p>
@@ -336,6 +394,7 @@
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/embed/n5TSSNokBMs" target="_blank">
+                                    <div class="img" style="background-image:url('./img/video5.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">하이라이트(HIGHLIGHT) THE 5TH MINI ALBUM [Switch On] COMEBACK TRAILER</p>
                                         <p class="text2">하이라이트(HIGHLIGHT)</p>
@@ -354,6 +413,7 @@
                         <ul class="news-item">
                             <li>
                                 <a href="/news/detail/430" target="_blank">
+                                    <div class="img" style="background-image:url('./img/news1.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">
                                             ‘헌병 출신’ 윤두준 “SDT와 함께 군생활..멋있었다”(‘강철부대3’) (출처 : OSEN | 네이버 TV연예)
@@ -363,6 +423,7 @@
                             </li>
                             <li>
                                 <a href="/news/detail/429" target="_blank">
+                                    <div class="img" style="background-image:url('./img/news2.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">
                                             하이라이트 양요섭, 공식 포토북 출시…유럽 소년→남자 매력 (출처 : 엑스포츠뉴스 | 네이버 TV연예)
@@ -372,6 +433,7 @@
                             </li>
                             <li>
                                 <a href="/news/detail/428" target="_blank">
+                                    <div class="img" style="background-image:url('./img/news3.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">
                                             하이라이트 윤두준·양요섭·손동운 '독서 웹예능' 의미·재미 잡는다 (출처 : JTBC | 네이버 TV연예)
@@ -381,6 +443,7 @@
                             </li>
                             <li>
                                 <a href="/news/detail/427" target="_blank">
+                                    <div class="img" style="background-image:url('./img/news4.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">
                                             윤두준, 현직 아이돌에게 ‘메뉴 추천’ 부탁…그 정체는? (뚜벅이 맛총사) (출처 : 스포츠동아 | 네이버 TV연예)
@@ -390,6 +453,7 @@
                             </li>
                             <li>
                                 <a href="/news/detail/426" target="_blank">
+                                    <div class="img" style="background-image:url('./img/news5.jpg');"></div>
                                     <div class="text_box">
                                         <p class="text1">
                                             양요섭, ˙연인˙ OST ˙연모(戀慕)˙ 발매... 드라마 상승세 지원사격 (출처 : MBC연예 | 네이버 TV연예)

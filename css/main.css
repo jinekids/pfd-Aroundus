@@ -29,18 +29,17 @@ header .wrap h1 a {
 }
 header .wrap > ul.gnb {
 }
-header .wrap > ul.gnb li {
-
+header .wrap > ul.gnb > li {
   padding: 0 10px;
 }
-header .wrap > ul.gnb li a {
+header .wrap > ul.gnb li > a {
   line-height: 102px;
   padding: 0 10px;
   font-weight: 500;
   color: #2d2d2d;
   position: relative;
 }
-header .wrap > ul.gnb li.on a::after{
+header .wrap > ul.gnb li:hover a::after{
   width: 100%;
 }
 header .wrap > ul.gnb li a::after{
@@ -52,31 +51,41 @@ header .wrap > ul.gnb li a::after{
   height:1px; 
   background:#000;
 }
-header .wrap .wgnb {
+header .wrap > ul.gnb li > .wsub {
   position: absolute;
   top: 100px;
   width: 100%;
   height: 60px;
   background: rgba(250,250,250,1);
-  display: none;
-}
-header .wrap .wgnb .wsub {
-  width: 100%;
+  /*! display: none; */
   margin: 0 auto;
+  /*! left: 0; */
 }
-header .wrap .wgnb .wsub h2 {
-  display: none;
-}
-header .wrap .wgnb .wsub ul {
+header .wrap > ul.gnb li > .wsub ul {
+  width: 500px;
   display: flex;
+  /*! margin: 0 auto; */
 }
-header .wrap .wgnb .wsub ul li {
+header .wrap > ul.gnb li > .wsub ul li{
+  /*! width: 100%; */
+  padding-left: 0;
 }
-header .wrap .wgnb .wsub ul li a {
+header .wrap > ul.gnb li > .wsub ul li a{
   display: inline-block;
   padding: 22px 18px;
   font-weight: 500;
   color: #2d2d2d;
+  line-height: 1.2;
+  position: relative;
+}
+header .wrap > ul.gnb li > .wsub ul li a:hover:after{
+  position:absolute;
+  bottom:0; 
+  left:0; 
+  content:""; 
+  width:0%; 
+  height:1px; 
+  background:#000;
 }
 header .wrap .search {
   position: absolute;
@@ -330,29 +339,29 @@ header .wrap .search a span {
   height: 100%;
 }
 #main_section0 .wrap .main_box .v_box ul li a{
+  /*! width: 100%; */
+  /*! height: 310px; */
+  /*! background-repeat: no-repeat; */
+  /*! background-size: cover; */
+  /*! background-position: center; */
+  display: block;
+  position: relative;
+}
+#main_section0 .wrap .main_box .v_box ul li a .img,
+#main_section0 .wrap .main_box .n_box ul li a .img
+{
   width: 100%;
   height: 310px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: block;
-  position: relative;
 }
-#main_section0 .wrap .main_box .v_box ul li:nth-child(2) a{
-  background-image: url(../img/video1.jpg);
+#main_section0 .wrap .main_box .v_box ul li:hover a .img,
+#main_section0 .wrap .main_box .n_box ul li:hover a .img{
+  transform: scale(1.1);
+  transition: all .6s ease-in-out;
 }
-#main_section0 .wrap .main_box .v_box ul li:nth-child(3) a{
-  background-image: url(../img/video2.jpg);
-}
-#main_section0 .wrap .main_box .v_box ul li:nth-child(4) a{
-  background-image: url(../img/video3.jpg);
-}
-#main_section0 .wrap .main_box .v_box ul li:nth-child(5) a{
-  background-image: url(../img/video4.jpg);
-}
-#main_section0 .wrap .main_box .v_box ul li:nth-child(6) a{
-  background-image: url(../img/video5.jpg);
-}
+
 #main_section0 .wrap .main_box .v_box ul li a::after{
   content: "";
   width: 100%;
@@ -369,6 +378,7 @@ header .wrap .search a span {
   left: 0;
   z-index: 1;
 }
+
 #main_section0 .wrap .main_box .v_box ul li a .text_box .text1{
   padding-top: 30px;
   font-size: 20px;
@@ -380,7 +390,7 @@ header .wrap .search a span {
   line-height: 1.2;
   position: relative;
 }
-#main_section0 .wrap .main_box .v_box ul li a .text_box .text1:hover::after{
+#main_section0 .wrap .main_box .v_box ul li:hover a .text_box .text1::after{
   content: "";
   position: absolute;
   bottom: 2px;
@@ -396,7 +406,7 @@ header .wrap .search a span {
   display: inline-block;
   position: relative;
 }
-#main_section0 .wrap .main_box .v_box ul li a .text_box .text2:hover::after{
+#main_section0 .wrap .main_box .v_box ul li:hover a .text_box .text2::after{
   content: "";
   position: absolute;
   bottom: 2px;
@@ -425,21 +435,7 @@ header .wrap .search a span {
   display: block;
   position: relative;
 }
-#main_section0 .wrap .main_box .n_box ul li:nth-child(2) a{
-  background-image: url(../img/news1.jpg);
-}
-#main_section0 .wrap .main_box .n_box ul li:nth-child(3) a{
-  background-image: url(../img/news2.jpg);
-}
-#main_section0 .wrap .main_box .n_box ul li:nth-child(4) a{
-  background-image: url(../img/news3.jpg);
-}
-#main_section0 .wrap .main_box .n_box ul li:nth-child(5) a{
-  background-image: url(../img/news4.jpg);
-}
-#main_section0 .wrap .main_box .n_box ul li:nth-child(6) a{
-  background-image: url(../img/news5.jpg);
-}
+
 #main_section0 .wrap .main_box .n_box ul li a::after{
   content: "";
   width: 100%;
@@ -466,7 +462,7 @@ header .wrap .search a span {
   display: inline-block;
   position: relative;
 }
-#main_section0 .wrap .main_box .n_box ul li a .text_box .text1:hover::after{
+#main_section0 .wrap .main_box .n_box ul li:hover a .text_box .text1::after{
   content: "";
   position: absolute;
   bottom: 2px;
@@ -543,13 +539,18 @@ header .wrap .search a span {
   display: inline-block;
   background-size: cover;
   background-position: center;
-  overflow-y: auto;
 }
 #main_section1 .wrap .social_list ul li .sub_box{
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
   background:rgba(255,255,255,0.95);
   opacity: 0;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: thin; /* Firefox */
+}
+#main_section1 .wrap .social_list ul li .sub_box::-webkit-scrollbar{
+  display: none; /* Chrome, Safari, Opera*/
 }
 #main_section1 .wrap .social_list ul li .sub_box:hover{
   opacity: 1;
@@ -557,9 +558,12 @@ header .wrap .search a span {
 #main_section1 .wrap .social_list ul li .sub_box .sns1{
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,0.95);
+  padding-top: 73px;
 }
-
+.content_txt p{
+  line-height: 1.29;
+font-weight: 500;
+}
 
 
 
@@ -569,9 +573,9 @@ header .wrap .search a span {
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
-  background-position: center;
-  margin: 73px 0 0 10px;
-  display: block;
+  /*! background-position: center; */
+  margin: 0px 0 0 10px;
+  /*! display: block; */
 }
 .icon_Instar{
   background-image: url(../img/icon_is_bk.svg);
@@ -579,13 +583,11 @@ header .wrap .search a span {
   height: 32px;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 73px 0 0 10px;
+  margin: 0px 0 0 10px;
   display: block;
 }
 .content_txt{
   padding:0 20px 20px 20px;
-  line-height:1.29; 
-  font-weight:500;
 }
 /* slick */
 .plus{

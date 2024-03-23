@@ -1,0 +1,847 @@
+@media screen and (max-width:1440px){
+  /*  pc버전은 1900 정도  */
+  body{
+    overflow-x: hidden;
+  }
+  .wrap{
+    width: 100%;
+    
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1219px){
+  header{
+    padding-top: 2.5vh;
+  }
+  header .wrap{
+    width: 100%;
+    justify-content: center;
+  }
+  header ul.gnb{
+  }
+  header ul.gnb li{
+
+  }
+  header ul.gnb li a{
+    font-size: 3.6vw;
+  }
+
+  /* -------------- title -------------- */  
+  div#title{
+/*     outline: 1px solid aliceblue; */
+    height: 100vh;
+  }
+  div#title div.wrap{
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
+  div#title div.wrap h2{
+    font-size: 39.6vw;
+    position: relative;
+    left: -18vw;
+    transform: initial;
+    top: -6.6vh;
+  }
+  div#title div.wrap h3{
+    font-size: 19.5vw;
+    position: relative;
+    left: 0;
+    transform: initial;
+    top: -10vh;
+    right: 0;
+  }
+  div#title div.wrap p{
+    font-size: 3.5vw;
+    position: absolute;
+    bottom: 11vh;
+  }
+  
+  /* -------------- about -------------- */
+  section#about{
+    /*! outline: 1px solid aliceblue; */
+    min-height: 100%;
+  }
+  section#about .wrap{
+  height: 100%;
+  }
+  section#about .wrap h2{
+    font-size: 6vw;
+    padding-top: 11vh;
+    padding-left: 3.6vw;
+    display: none;
+  }
+  section#about .wrap .div1{
+    height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-top: 0;
+    width: 100%;
+  }
+  section#about .wrap .div1 .aimg{
+    width: 100%;
+    display: flex;
+    padding-top: 0;
+  }
+  section#about .wrap .div1 .aimg figure{
+    box-sizing: border-box;
+    width: 40%;
+  }
+  section#about .wrap .div1 .aimg figure::before{
+    width: calc(100% - 10%);
+    height: calc(100% - 50%);
+    /*! top: calc(100% - 67%); */
+    left: calc(100% - 79%);
+  }
+  section#about .wrap .div1 .aimg figure h3{
+    font-size: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    top: 35%;
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .aimg figure h3::before{
+    content: "";
+    background-image: url(../img/mimo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: calc(100% - 11%);
+    margin-left: calc(100% - 67%);
+  }
+  section#about .wrap .div1 .aimg .hash{
+    margin-top: 14vh;
+    height: fit-content;
+    margin-left: 9%;
+    width: 40%;
+  }
+  section#about .wrap .div1 .aimg .hash li{
+    margin-left: 0;
+    font-size: 3.5vw;
+    line-height: 1.3;
+    width: auto;
+    height: fit-content;
+  }
+  section#about .wrap .div1 .aimg .hash li a{
+    width: auto;
+    padding-left: 4px;
+  }  
+  section#about .wrap .div1 .aimg ul li a:before{
+    font-size: 3.5vw;
+  }
+  section#about .wrap .div1 .aimg ul li a::after{
+    width: calc(100vw - 77vw);
+    left: calc(100vw - 104vw);
+  }
+  section#about .wrap .div1 .aimg ul li:not(:nth-child(6))::before{
+    font-size: 3.5vw;
+  }
+  section#about .wrap .div1 .ainfo{
+    margin: 0;
+    width: 100%;
+    margin-top: 6vh;
+  }
+  section#about .wrap .div1 .ainfo .subinfo{
+    width: 100%;
+    gap: 15px;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li{
+    margin-left: 6vw;
+    margin-right: 6vw;
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(1){
+    width: 100%;
+    height: 24vh;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(2){
+    width: 100%;
+    height: 22vh;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3){
+    width: 100%;
+    height: 15vh;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li h3{
+    font-size: 4vw;
+    margin: 2vh 0 0 5vw;
+    height: 5vh;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li p{
+    font-size: calc(100vh - 97.4vh);
+    margin: 5vw;
+    margin-top: 0;
+    word-break: keep-all;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li:nth-child(2) p:nth-child(2){
+    font-size: calc(100vh - 97.4vh);
+    margin: 1vw 5vw;
+    word-break: keep-all;
+    margin-top: 0;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul{
+    margin: 5vw;
+    margin-top: 0;
+    gap: initial;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li{
+    font-size: calc(100vh - 97.4vh);
+    padding: 0 3vw 0 3vw;
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li:nth-child(1){
+    padding-left: 0;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li:nth-child(5){
+    padding-left: 0;
+  }
+  
+  /* -------------- portfolio -------------- */  
+  section#portfolio{
+    height: calc(100%);
+    /*! min-height: 100%; */
+  }
+  section#portfolio .wrap{
+    height: 100%;
+    min-height: 100%;
+  }
+  section#portfolio .wrap h2{
+    font-size: 10vw;
+    text-align: center;
+    /*! margin-top: -5vh; */
+    padding-top: 10vh;
+  }
+  section#portfolio .wrap .web{
+    height: auto;
+    margin-top: 0;
+  }
+  section#portfolio .wrap .web::before{
+    transform: initial;
+    padding: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 6vw;
+    line-height: 2;
+  }  
+  section#portfolio .wrap .web .pf01{
+    padding: 0 7vw;
+    box-sizing: border-box;
+  }
+  section#portfolio .wrap .web .pf01 > ul{
+    font-size: 4.5vw;
+    height: auto;
+    /*! margin-top: 10%; */
+  }  
+  section#portfolio .wrap .web .pf01 ul li{
+    margin: 3vh 0 0 0;
+  }
+  section#portfolio .wrap .web .pf01 ul li:nth-child(1){
+
+  }
+  section#portfolio .wrap .web .pf01 ul li a{
+    width: 100%;
+  }
+  section#portfolio .wrap .web .pf01 ul li p{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    font-size: 2.5vw;
+  }
+  section#portfolio .wrap .web .pf01 ul li p a{
+    width: 20vw;
+  }  
+  
+  /* -------------- contact -------------- */
+  section#contact{
+    height: 92% !important;
+  }
+  section#contact .wrap{
+
+  }
+  section#contact .wrap h2{
+    padding-top: 15vh;
+    font-size: 10vw;
+    text-align: center;
+  }
+  section#contact .wrap .address{
+    margin: 16vh 0 0 0;
+    padding: initial;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  section#contact .wrap .address .email{
+
+  }
+  section#contact .wrap .address .email p{
+    font-size: 4vw;
+  }
+  section#contact .wrap .address .kakaoqr{
+    width: calc(100% - 67vw);
+    margin-top: 3vh;
+  }
+  section#contact .wrap .address .kakaoqr img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* -------------- footer -------------- */
+  footer{
+    padding-top: 3vh;
+  }
+  footer .footer{
+    padding: 3vh;
+    height: 100%;
+    font-size: 2.5vw;
+  }  
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+@media screen and (max-width:768px){
+  header{
+    padding-top: 2.5vh;
+    text-align: center;
+    width: 100%;
+  }
+  header .wrap{
+    width: 100%;
+    justify-content: center;
+  }
+  header ul.gnb{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul.gnb li{
+
+  }
+  header ul.gnb li a{
+    font-size: 3.5vw;
+  }
+
+  /* -------------- title -------------- */  
+  div#title{
+    height: 100vh;
+  }
+  div#title div.wrap{
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
+  div#title div.wrap h2{
+    font-size: 39.6vw;
+    position: relative;
+    left: -18vw;
+    transform: initial;
+    top: -12vh;
+  }
+  div#title div.wrap h3{
+    font-size: 19.5vw;
+    position: relative;
+    left: 0;
+    transform: initial;
+    top: -15vh;
+    right: 0;
+  }
+  div#title div.wrap p{
+    font-size: 4vw;
+    position: absolute;
+    bottom: 20vh;
+  }
+
+
+  /* -------------- about -------------- */
+  section#about{
+    min-height: 100vh;
+    height: 100vh !important;
+  }
+  section#about .wrap{
+    height: 100% !important;
+    /*! min-height: 500px; */
+  }
+  section#about .wrap h2{
+    font-size: 6vw;
+    padding-top: 11vh;
+    padding-left: 3.6vw;
+    display: none;
+  } 
+  section#about .wrap .div1{
+    height: 100vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2vh;
+/*   test   */
+    padding: 0;
+  }
+  section#about .wrap .div1 .aimg{
+    width: 100%;
+    display: flex;
+    margin-top: 3vh;
+    height: calc(100% - 74%);
+    justify-content: space-between;
+  }
+  section#about .wrap .div1 .aimg figure{
+    width: 40%;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 0;
+  }
+  section#about .wrap .div1 .aimg figure::before{    
+    width: calc(100% * 1);
+    height: calc(100% - 60%);
+    top: calc(100% - 59%);
+    left: calc(100% - 79%);
+  }
+  section#about .wrap .div1 .aimg figure h3{
+    font-size: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    top: 31px;
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .aimg figure h3::before{
+    content: "";
+    background-image: url(../img/mimo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: calc(100% - 18%);
+    margin-left: calc(100% - 64.5%);
+    /*! margin-top: calc(100% - 99%); */
+  }
+  section#about .wrap .div1 .aimg figure img{
+    width: auto;
+    height: 100%;
+    /*! margin: 0; */
+    margin-left: calc(100% - 26vw);
+    position: initial;
+    padding-top: 2vh;
+  }
+  section#about .wrap .div1 .aimg .hash{
+    /*! display: block; */
+    width: 35%;
+    /*! height: fit-content; */
+    margin-left: 0;
+    flex-wrap: wrap;
+    /*! gap: 10px; */
+    margin: 7vh auto 0 0;
+    margin-top: 7%;
+  }  
+
+  section#about .wrap .div1 .aimg .hash li{
+    margin-left: 0;
+    font-size: calc(100% - 25%);
+    line-height: 1.3;
+    width: auto;
+  }
+  section#about .wrap .div1 .aimg .hash li a{
+    width: auto;
+    padding-left: 4px;
+  }  
+  section#about .wrap .div1 .aimg ul li:not(:nth-child(6))::before{
+    font-size: 3.5vw;
+  }
+  section#about .wrap .div1 .aimg ul li a:before{
+    font-size: 3.5vw;
+  }
+  section#about .wrap .div1 .aimg ul li a::after{
+    width: calc(100vw - 79vw);
+    left: calc(100vw - 104vw);
+  }
+  section#about .wrap .div1 .ainfo{
+    margin: 0;
+    width: 100%;
+    margin-top: calc(100% - 97%);
+  }
+  
+  section#about .wrap .div1 .ainfo .subinfo{
+    /*! width: 100%; */
+    gap: 20px;
+    margin: 0 auto;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li{
+    margin-left: 6vw;
+    margin-right: 6vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(1){
+    width: 80%;
+    height: calc(100% - 60%);
+    border-radius: 20px;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(2){
+    width: 80%;
+    height: calc(100% - 60%);
+    border-radius: 20px;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3){
+    width: 80%;
+    height: calc(100% - 60%);
+    border-radius: 17px;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li h3{
+    font-size: 80%;
+    margin: 1.5vh 0 0 5vw;
+    height: 4vh;
+    width: 100%;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li p{
+    font-size: calc(100vh - 97.8vh);
+    margin: 0.5% 5vw 3%;
+    margin-top: 0.5%;
+    word-break: keep-all;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li:nth-child(2) p:nth-child(2){
+    /*! font-size: calc(100% - 40%); */
+    margin: 1vw 5vw;
+    word-break: keep-all;
+    margin-bottom: 0;
+    /*! margin-top: -3%; */
+    padding-bottom: 0;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li:nth-child(2) p:nth-child(3){
+    /*! font-size: calc(100% - 40%); */
+    margin: 0.5% 5vw 3%;
+    word-break: keep-all;
+    /*! margin-bottom: 0; */
+    margin-top: 2%;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul{
+    margin: 0.5% 5vw 3%;
+    gap: 2vw;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li{
+    padding: 0 3vw 0 3vw;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: calc(100vh - 97.8vh);
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li:nth-child(1){
+    /*! padding-left: 0; */
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li:nth-child(5){
+    padding-left: 0;
+  }
+
+
+  
+  
+  /* -------------- portfolio -------------- */  
+  section#portfolio{
+    height: calc(100%);
+    /*! min-height: 100%; */
+  }
+  section#portfolio .wrap{
+    height: 100%;
+    min-height: 100%;
+  }
+  section#portfolio .wrap h2{
+    font-size: 10vw;
+    text-align: center;
+    /*! margin-top: -5vh; */
+    padding-top: 10vh;
+  }
+  section#portfolio .wrap .web{
+    height: auto;
+    margin-top: 0;
+  }
+  section#portfolio .wrap .web::before{
+    transform: initial;
+    padding: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 6vw;
+    line-height: 2;
+  }  
+  section#portfolio .wrap .web .pf01{
+    padding: 0 7vw;
+    box-sizing: border-box;
+  }
+  section#portfolio .wrap .web .pf01 > ul{
+    font-size: 4.5vw;
+    height: auto;
+    /*! margin-top: 10%; */
+  }  
+  section#portfolio .wrap .web .pf01 ul li{
+    margin: 2vh 0 0 0;
+  }
+  section#portfolio .wrap .web .pf01 ul li:nth-child(1){
+
+  }
+  section#portfolio .wrap .web .pf01 ul li a{
+    width: 100%;
+  }
+  section#portfolio .wrap .web .pf01 ul li p{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    font-size: 2.5vw;
+  }
+  section#portfolio .wrap .web .pf01 ul li p a{
+    width: 20vw;
+  }  
+
+  
+  /* -------------- contact -------------- */
+  section#contact{
+    height: 92% !important;
+  }
+  section#contact .wrap{
+
+  }
+  section#contact .wrap h2{
+    padding-top: 15vh;
+    font-size: 10vw;
+    text-align: center;
+  }
+  section#contact .wrap .address{
+    margin: 16vh 0 0 0;
+    padding: initial;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  section#contact .wrap .address .email{
+
+  }
+  section#contact .wrap .address .email p{
+    font-size: 4vw;
+  }
+  section#contact .wrap .address .kakaoqr{
+    width: calc(100% - 67vw);
+    margin-top: 3vh;
+  }
+  section#contact .wrap .address .kakaoqr img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* -------------- footer -------------- */
+  footer{
+    /*! padding-top: 3vh; */
+  }
+  footer .footer{
+    padding: 3vh;
+    height: 100%;
+    font-size: 3vw;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+@media screen and (max-width:451px){
+  .wrap{
+    width: 100%;
+  }
+  header .wrap{
+    width: 100%;
+    justify-content: center;
+  }
+  header ul.gnb{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul.gnb li a{
+    font-size: 4vw;
+  }
+
+  /* -------------- title -------------- */  
+
+  /* -------------- about -------------- */
+
+  section#about .wrap .div1 .aimg{
+    margin-top: 4vh;
+  }
+  section#about .wrap .div1 .aimg figure{
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .aimg figure::before{
+    width: calc(100% * 1);
+    height: calc(100% - 60%);
+    /*! top: calc(100% - 67%); */
+    left: calc(100% - 79%);
+  }
+  section#about .wrap .div1 .aimg figure h3{
+    font-size: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    top: 31px;
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .aimg figure h3::before{
+    content: "";
+    background-image: url(../img/mimo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: calc(100% - 18%);
+    margin-left: calc(100% - 63%);
+  }
+  section#about .wrap .div1 .aimg .hash{
+    margin-top: 5vh;
+  }
+  section#about .wrap .div1 .aimg .hash li{
+    margin-left: 0;
+    font-size: 3.5vw;
+    line-height: 1.3;
+    width: auto;
+  }
+  section#about .wrap .div1 .aimg .hash li a{
+    width: auto;
+    padding-left: 4px;
+  }  
+  section#about .wrap .div1 .aimg ul li a:before{
+    font-size: 3.5vw;
+  }
+  section#about .wrap .div1 .aimg ul li a::after{
+    width: calc(100vw - 77vw);
+    left: calc(100vw - 104vw);
+  }
+  section#about .wrap .div1 .aimg ul li:not(:nth-child(6))::before{
+    font-size: 3.5vw;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li{
+    margin-left: 6vw;
+    margin-right: 6vw;
+    box-sizing: border-box;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(1),
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(2){
+    width: 100%;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3){
+    width: 100%;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li h3{
+    font-size: 4vw;
+    height: 4vh;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li p{
+    margin: 5vw;
+    margin-top: 0;
+    word-break: keep-all;
+  }
+  section#about .wrap .div1 .ainfo .subinfo li:nth-child(2) p:nth-child(2){
+    margin: 1vw 5vw;
+    word-break: keep-all;
+    margin-top: 0;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul{
+    margin-top: 0;
+  }
+  section#about .wrap .div1 .ainfo .subinfo > li:nth-child(3) ul li{
+    padding: 0 3vw 0 0;
+    box-sizing: border-box;
+  }
+
+  /* -------------- portfolio -------------- */
+  section#portfolio{
+    height: calc(100% + 10vh);
+    min-height: 100%;
+  }
+  section#portfolio .wrap{
+    height: 100%;
+    min-height: 100%;
+  }
+  section#portfolio .wrap h2{
+    font-size: 10vw;
+    text-align: center;
+    /*! margin-top: -5vh; */
+  }
+  section#portfolio .wrap .web{
+    height: auto;
+    margin-top: 0;
+  }
+  section#portfolio .wrap .web::before{
+    transform: initial;
+    padding: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 6vw;
+    line-height: 2;
+  }
+  section#portfolio .wrap .web .pf01{
+    padding: 0 0 0 7vw;
+    box-sizing: border-box;
+  }
+  section#portfolio .wrap .web .pf01 > ul{
+    font-size: 4.5vw;
+    height: auto;
+    /*! margin-top: 10%; */
+  }
+  section#portfolio .wrap .web .pf01 ul li{
+    margin: 3.5vh 0 0 0;
+  }
+  section#portfolio .wrap .web .pf01 ul li a{
+    width: 100%;
+  }
+  section#portfolio .wrap .web .pf01 ul li p{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    font-size: 3vw;
+  }
+  section#portfolio .wrap .web .pf01 ul li p a{
+    width: 20vw;
+  }
+  
+  /* -------------- contact -------------- */
+  section#contact{
+    height: 90% !important;
+  }
+  section#contact .wrap h2{
+    padding-top: 15vh;
+    font-size: 10vw;
+    text-align: center;
+  }
+  section#contact .wrap .address{
+    margin: 16vh 0 0 0;
+    padding: initial;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  section#contact .wrap .address .email{
+
+  }
+  section#contact .wrap .address .email p{
+    font-size: 4vw;
+  }
+  section#contact .wrap .address .kakaoqr{
+    width: 52vw;
+    margin-top: 3vh;
+  }
+  section#contact .wrap .address .kakaoqr img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* -------------- footer -------------- */
+  footer{
+  }
+  footer .footer{
+    padding: 3vh;
+    height: 100%;
+    font-size: 3vw;
+  }
+}
