@@ -39,7 +39,7 @@ header .wrap > ul.gnb li > a {
   color: #2d2d2d;
   position: relative;
 }
-header .wrap > ul.gnb li:hover a::after{
+header .wrap > ul.gnb li.on a::after{
   width: 100%;
 }
 header .wrap > ul.gnb li a::after{
