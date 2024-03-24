@@ -35,69 +35,19 @@
         $(document).ready(function(){
             $("header .wrap ul.gnb > li").hover(
                 function(){
-                    $(this).addClass("on");
-                    $("header .wrap").addClass("bg_bk");
-                    $("header .wrap .wsub").addClass("wShow");
+                    var n = $(this);
+                    $("header .wrap").addClass("bg_wh");
+                    $("header .wrap").find(".sub_wrap").stop().slideDown(200, function(){
+                        n.addClass("on").find(".wsub").fadeIn(500);
+                    });
 
                 },
                 function(){
-                    $(this).removeClass("on");
-                    $("header .wrap").removeClass("bg_bk");
-                    $("header .wrap .wsub").removeClass("wShow");
+                    $("header .wrap").removeClass("bg_wh");
+                    $("header .wrap").find(".sub_wrap").stop().slideUp(200);
+                    $(this).removeClass("on").find(".wsub").fadeOut();
                 }
             )
-            
-
-            // $('.header_box .menu_box > ul > li').hover(
-            //     function(){
-            //         var t = $(this);
-            //         $('.header_box2').find('.hd_bg').stop().slideDown(200 , function(){t.addClass('on').find('.submenu').stop().fadeIn(300);});
-            //     },
-            //     function(){
-            //         $('.header_box2').find('.hd_bg').stop().slideUp(200);
-            //         $(this).removeClass('on').find('.submenu').stop().fadeOut(200);
-            //     }
-            // );
-
-
-
-
-                // // 대메뉴오버시 서브를 슬라이드 다운
-                // var wsubN;
-                // $("header .wrap ul.gnb li a").mouseenter(
-                //     function(){
-                //         wsubN=$(this).parent().index()+1;//마우스올린 대상의 부모의 순번을 가져와서 +1더해서 넣어라
-                //         if( $("header .wrap .wgnb .wsub:nth-child("+wsubN+")").has("ul").length>0){
-                //             $("header .wrap .wgnb .wsub:nth-child("+wsubN+")").parent().stop().slideDown();
-                //             //console.log(wsubN);
-                //         }else{
-                //             $("header .wrap .wgnb").stop().hide();
-                //         }
-                       
-                //         //제이쿼리 slideDown()시 css속성에 transition이 있으면 제대로  펼쳐지지 않는다... 
-                //         //wsub를 보이게 하시오
-                       
-                       
-                //         $("header .wrap .wgnb .wsub:nth-child("+wsubN+")").fadeIn();
-                //         $("header .wrap .wgnb .wsub:not(:nth-child("+wsubN+"))").fadeOut();
-                //     }
-                // );   
-                
-                // // 서브wgnb영역을 벗어나면 실행하시오(wgnb가 슬라이드업)
-                // $("header .wrap .wgnb,header").mouseleave(function(){
-                //     $(".wgnb").slideUp();
-                // });
-
-                // // h1요소에 마우스진입하면 (wgnb가 슬라이드업)
-                // $("header .wrap h1").mouseenter(function(){
-                //     $("header .wrap .wgnb").slideUp();
-                // });
-
-
-
-
-
-
         });
     </script>
 
@@ -150,6 +100,7 @@
     <!-- 상단영역 -->
     <header class="">
         <div class="wrap flex">
+            <div class="sub_wrap"></div>
             <h1 class="logo">
                 <a href="">어라운드어스</a>
             </h1>
@@ -158,31 +109,31 @@
                     <a class="" href="">About Around US</a>
                     <div class="wsub">
                         <ul class="">
-                            <li><a href="">Company Introduction</a></li>
-                            <li><a href="">History</a></li>
-                            <li><a href="">Contact Us</a></li>
+                            <li><a href=""><span>Company Introduction</span></a></li>
+                            <li><a href=""><span>History</span></a></li>
+                            <li><a href=""><span>Contact Us</span></a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <a class="" href="">HIGHLIGHT</a>
-                    <div class="wsub ">
+                    <div class="wsub">
                         <ul class="">
-                            <li><a href="">Artist Home</a></li>
-                            <li><a href="">Career</a></li>
-                            <li><a href="">Schedule</a></li>
-                            <li><a href="">Artist Notice</a></li>
-                            <li><a href="">Staff Notice</a></li>
+                            <li><a href=""><span>Artist Home</span></a></li>
+                            <li><a href=""><span>Career</span></a></li>
+                            <li><a href=""><span>Schedule</span></a></li>
+                            <li><a href=""><span>Artist Notice</span></a></li>
+                            <li><a href=""><span>Staff Notice</span></a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li>
                     <a class="" href="">Announce</a>
-                    <div class="wsub ">
+                    <div class="wsub">
                         <ul class="">
-                            <li><a href="">Notice</a></li>
-                            <li><a href="">News</a></li>
+                            <li><a href=""><span>Notice</span></a></li>
+                            <li><a href=""><span>News</span></a></li>
                         </ul>
                     </div>
                 </li>
